@@ -1,15 +1,15 @@
-import koma.create
-import koma.end
+import koma.*
 import koma.extensions.get
 import koma.extensions.toDoubleArray
-import koma.fill
-import koma.mat
 import view.short
 
 object ProcessData {
-    private val A = mat[ 0.7, 0.5, 0 end -0.5, 0.7, 0 end 0, 0, .9 ]
-    private val B = mat[ 1, 1, 1 ].transpose()
-    private val X_o = mat[ .1, .2, .3 ].transpose()
+
+    val Q_n = mat[ 1, 0, 0 end 0, 1, 0 end 0, 0, 1 ]    //TODO: to be fixed
+
+    val A = mat[ 0.7, 0.5, 0 end -0.5, 0.7, 0 end 0, 0, .9 ]
+    val B = mat[ 1, 1, 1 ].transpose()
+    val X_o = mat[ .1, .2, .3 ].transpose()
 
     private val Y_ref = mat[ 4, 3, 2, 4, 0, 1, 2, 4, 2, 3, 1, 1, 0, 4, 0, 0, 0, 0, 1, 4 ].transpose()
     private val C = mat[ 0, -1, 1 ]

@@ -1,3 +1,3 @@
 fun main(args: Array<String>) {
-    println(ProcessData.U)
+    println(SensorData.Z)
 }

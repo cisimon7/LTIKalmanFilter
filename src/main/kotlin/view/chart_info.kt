@@ -12,18 +12,18 @@ const val height = 700.0
 val chartWidth = width - margins.hMargins
 val chartHeight = height - margins.vMargins
 
-val gPoints = listOf(Point(.0, .0))
+val points = listOf(Point(.0, .0))
 
 val noise = RandomDistribution.normal(.0, .5)
 
-val noiseGenerator = { gPoints.toList().random().let { (x, y) -> Point(x + noise(), y + noise()) } }
+val noiseGenerator = { points.toList().random().let { (x, y) -> Point(x + noise(), y + noise()) } }
 
 val xScale = Scales.Continuous.linear {
-    domain = listOf(gPoints.map { it.x }.minOrNull()!!, gPoints.map { it.x }.maxOrNull()!!)
+    domain = listOf(points.map { it.x }.minOrNull()!!, points.map { it.x }.maxOrNull()!!)
     range = listOf(.0, chartWidth)
 }
 
 val yScale = Scales.Continuous.linear {
-    domain = listOf(gPoints.map { it.y }.minOrNull()!!, gPoints.map { it.y }.maxOrNull()!!)
+    domain = listOf(points.map { it.y }.minOrNull()!!, points.map { it.y }.maxOrNull()!!)
     range = listOf(chartHeight, .0)
 }
