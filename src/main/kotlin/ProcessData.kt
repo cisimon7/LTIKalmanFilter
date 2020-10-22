@@ -21,11 +21,11 @@ object ProcessData {
         when {
             i == j -> Q_o
             i < j -> .0
-            else -> (C * A.pow(i-j) * B).short().getDouble(0,0)
+            else -> (C * A.pow(i-j) * B)/*.short()*/.getDouble(0,0)
         }
     }
 
-    private val Phi = create(List(20) { i -> (C * A.pow(i)).short().toDoubleArray() }.toTypedArray())
+    private val Phi = create(List(20) { i -> (C * A.pow(i))/*.short()*/.toDoubleArray() }.toTypedArray())
 
-    val U = (Q.pinv()*(yRef - (Phi * Xo))).short()
+    val U = (Q.pinv()*(yRef - (Phi * Xo)))/*.short()*/
 }
