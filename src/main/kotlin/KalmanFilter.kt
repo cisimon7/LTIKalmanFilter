@@ -30,7 +30,7 @@ object KalmanFilter {
 
     /*Entry States*/ //TODO: check
     var X = mat[ .1, .2, .3 ].transpose()
-    var P = mat[ 20, 0, 0 end 0, 30, 0 end 0, 0, 25 ]
+    var P = mat[ 30, 0, 0 end 0, 60, 0 end 0, 0, 25 ]
 
     private fun predict(i: Int) {
         /*Extrapolate the state*/

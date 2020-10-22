@@ -1,7 +1,12 @@
+import view.short
+
 fun main(args: Array<String>) {
 
-    println(ProcessData.Q)
+    /* Q matrix */
+    println("Q matrix:")
+    println(ProcessData.Q.short())
 
     /* Optimum values for u */
-    println(ProcessData.U)
+    println("\n\nU matrix")
+    println(ProcessData.U.short())
 }
