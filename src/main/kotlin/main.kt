@@ -8,7 +8,9 @@ fun main(args: Array<String>) {
         println("${x.short()}")
     }*/
 
-    states.map { (k, x) -> Pair(k.short(), x.short()) }.forEach { (k, _) ->
-        println("${k[0,0]}, ${k[0,0]}, ${k[0,0]}")
-    }
+    /*states.drop(1).map { (k, x) -> Pair(k.short(), x.short()) }.forEach { (k, _) ->
+        println("${k[0,0]}, ${k[1,1]}, ${k[2,2]}")
+    }*/
+
+    println(states[1])
 }
