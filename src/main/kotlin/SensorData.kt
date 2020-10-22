@@ -12,7 +12,7 @@ object SensorData {
     val n1 = RandomDistribution.normal(.0, 1.7)
     val n2 = RandomDistribution.normal(.0, 1.0)
     val n3 = RandomDistribution.normal(.0, 1.8)
-    private val noise = mat[ n1(), n2(), n3() ]
+    private val noise = mat[ n1(), n2(), n3() ].transpose()
 
     val Z = { x: Matrix<Double> -> x + noise }  //TODO: crosscheck
 }
